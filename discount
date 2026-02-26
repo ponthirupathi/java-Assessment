@@ -1,0 +1,36 @@
+package javaProgram;
+
+import java.util.Scanner;
+
+public class Discount {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("if u buy above 5000, 10% offer.....");
+		System.out.println("Enter amount..");
+		int amount  = sc.nextInt();
+		
+		condition(amount);
+	
+	}
+	
+	public static void condition(int amount) {
+		
+		int temp_amount = amount;
+		
+		if(temp_amount >= 5000) {
+			
+			int discount = temp_amount / 100 *10;
+		    int Amount = temp_amount - discount;
+			System.out.println("Now U Get Disount...:"+discount);
+			System.out.println("Now u Amount...:"+Amount);
+			System.out.println("Thankyou...");
+				 
+			 
+		}else {
+			System.out.println("U don't have any discount ,your Amount..."+ temp_amount);
+			
+		}
+	}
+}
