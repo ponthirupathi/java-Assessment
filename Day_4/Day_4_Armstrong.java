@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Armstrong_number {
+public class Day_4_Armstrong {
 	
 	public static void main(String []djgv) {
 		
