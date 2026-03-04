@@ -1,0 +1,30 @@
+package Day4;
+import java.util.Scanner;
+
+
+public class numberOf_digits {
+	
+	public static void main(String[]dwkhgf) {
+		
+		Scanner sc =new Scanner(System.in); 
+			
+		System.out.println("Enter a number to find how many digits in a number");
+		int number = sc.nextInt();
+		 int i = 0;
+		
+		 
+		 if(number == 0) {
+			 i=1;
+		 }else {
+	     while(number != 0) {
+	    	 
+	    	
+	    	 
+	    	number = number /10;
+	    	i++;
+	    	 }
+	      }
+		 System.out.println("the digts of number is :"+ i);
+	}
+
+}
