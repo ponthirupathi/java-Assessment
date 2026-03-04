@@ -1,0 +1,36 @@
+package Day4;
+import java.util.Scanner;
+
+public class Atm {
+
+	
+		public static void main(String[]dwkhgf) {
+		
+		Scanner sc =new Scanner(System.in); 
+		
+		System.out.println("enter u r withdrawal amount");
+		int WA = sc.nextInt();
+		
+		int intial = 10000;
+		
+		if(WA > 10001) {
+			
+			System.out.println("Insufficient Balance");
+			
+		}else if(WA > 0) {
+			
+			int balance = intial - WA;
+			System.out.println(" you successfully withdrawal "+WA+ " "+"enjoy..... ");
+			System.out.println("now your balance :"+balance);
+			
+			
+		}else {
+			
+			System.out.println("Invalid Amount");
+			
+		}
+		
+		
+	
+		}
+}
