@@ -28,7 +28,7 @@ public class Armstrong_number {
 			
 			mu  = duplicate % 10;
 			duplicate = duplicate / 10;
-		   cube = Math.pow(mu, 3);
+		   cube = Math.pow(mu, i);
 		   add += (int)(cube);
 		   
 		}
