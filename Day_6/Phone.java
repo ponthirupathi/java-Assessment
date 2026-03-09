@@ -1,3 +1,4 @@
+package Day_6;
 //.A mobile shop creates a phone object with default values.
 
 // Model → Samsung
