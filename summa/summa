@@ -1,0 +1,162 @@
+Constructor
+What is a Constructor?
+
+A constructor is a special method in Java that is automatically called when an object is created.
+
+Key Points
+
+Constructor name must be same as class name
+
+It does not have a return type
+
+It is used to initialize object values
+
+Example
+class Student {
+
+    int id;
+    String name;
+
+    // Constructor
+    Student() {
+        id = 101;
+        name = "Kavi";
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student(); // constructor called
+        s1.display();
+
+    }
+}
+Output
+101 Kavi
+
+When new Student() is created, the constructor automatically runs.
+
+2. Constructor Overloading
+What is Constructor Overloading?
+
+When a class has multiple constructors with different parameters, it is called Constructor Overloading.
+
+It allows objects to be created in different ways.
+
+Example
+class Student {
+
+    int id;
+    String name;
+
+    // Constructor 1
+    Student() {
+        id = 0;
+        name = "Unknown";
+    }
+
+    // Constructor 2
+    Student(int i, String n) {
+        id = i;
+        name = n;
+    }
+
+    void display() {
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+        Student s2 = new Student(101, "Kavi");
+
+        s1.display();
+        s2.display();
+    }
+}
+Output
+0 Unknown
+101 Kavi
+
+Here two constructors exist, so this is constructor overloading.
+
+3. Constructor Chaining
+What is Constructor Chaining?
+
+Constructor chaining means calling one constructor from another constructor in the same class using this().
+
+It helps reuse constructor code.
+
+Example
+class Student {
+
+    int id;
+    String name;
+
+    // Constructor 1
+    Student() {
+        this(101, "Kavi");   // calling another constructor
+        System.out.println("Default Constructor");
+    }
+
+    // Constructor 2
+    Student(int i, String n) {
+        id = i;
+        name = n;
+        System.out.println(id + " " + name);
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student();
+
+    }
+}
+Output
+101 Kavi
+Default Constructor
+
+Here
+this(101, "Kavi"); calls the second constructor.
+
+4. Polymorphism
+What is Polymorphism?
+
+Polymorphism means "many forms".
+
+In Java, one method can perform different tasks.
+
+Types of Polymorphism
+
+Compile Time Polymorphism
+(Method Overloading)
+
+Run Time Polymorphism
+(Method Overriding)
+
+Example (Method Overloading)
+class Add {
+
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+
+        Add obj = new Add();
+
+        System.out.println(obj.add(5,10));
+        System.out.println(obj.add(5,10,15));
+
+    }
+}
+Output
+15
+30
