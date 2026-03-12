@@ -1,4 +1,4 @@
-
+package Day_5;
 //Instance variables: empId, empName, basicSalary
 //
 //Method to calculate:

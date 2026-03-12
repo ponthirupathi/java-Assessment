@@ -1,4 +1,4 @@
-package javaProgram;
+package Day_1;
 import java.util.Scanner;
 
 public class Mark_grade {
